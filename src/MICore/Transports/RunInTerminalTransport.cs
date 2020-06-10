@@ -137,7 +137,7 @@ namespace MICore
                 using (FileStream dbgCmdStream = new FileStream(dbgCmdScript, FileMode.CreateNew))
                 using (StreamWriter dbgCmdWriter = new StreamWriter(dbgCmdStream, encNoBom) { AutoFlush = true })
                 {
-                    dbgCmdWriter.WriteLine("#!/usr/bin/env sh");
+                    dbgCmdWriter.WriteLine("#!/usr/bin/env bash");
                     dbgCmdWriter.Write(launchDebuggerCommand);
                     dbgCmdWriter.Flush();
                 }
@@ -154,7 +154,7 @@ namespace MICore
                 }
                 else
                 {
-                    cmdArgs.Add("/bin/sh");
+                    cmdArgs.Add("/bin/bash");
                     cmdArgs.Add(dbgCmdScript);
                 }
 
